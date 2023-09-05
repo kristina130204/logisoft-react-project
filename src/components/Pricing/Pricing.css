@@ -1,0 +1,45 @@
+.p-container{
+    position: relative;
+    gap: 2rem;
+    text-align: center;
+}
+.p-container ul{
+    position: relative;
+}
+.p-container .btn{
+    position: relative;
+}
+.p-container span{
+    position: relative;
+}
+.p-container .primary-text{
+    position: relative;
+}
+.p-container .cards{
+    gap: 1.5rem;
+}
+.business{
+    scale: 1.05;
+}
+.price>span:nth-child(1){
+    font-size: 1.2rem;
+    color: var(--secondary-color)
+}
+.price>span:nth-child(2){
+    font-size: 2rem;
+}
+.price-container{
+    gap: .8rem;
+}
+.price{
+    gap: .2rem;
+}
+.price-container ul{
+    text-align: left;
+}
+
+@media (max-width: 980px) {
+    .p-container .cards{
+        gap: 4rem;
+    }
+}

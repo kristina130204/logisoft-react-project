@@ -1,0 +1,87 @@
+.h-wrap{
+    color: var(--light-color);
+    position: relative;
+    z-index: 1000;
+}
+.h-wrap a{
+    color: var(--light-color);
+}
+.h-container{
+    justify-content: space-between;
+    color: var(--light-color);
+    position: relative;
+}
+.h-container>div{
+    flex: 1;
+}
+.h-container>div:nth-child(2){
+    display: flex;
+    width: 100%;
+}
+.h-menu{
+    gap: 2rem;
+    flex: 2;
+}
+.h-menu .flex{
+    gap: 2rem;
+    position: relative;
+}
+.h-menu>*:hover{
+    cursor: pointer;
+}
+.menu-icon{
+    display: none;
+    gap: 0.3rem;
+}
+.menu-icon>div{
+    background: var(--light-color);
+    width: 30px;
+    height: 3px;
+}
+.logo{
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 32px;
+    position: relative;
+    flex: 1;
+}
+.logo>span{
+    position: relative;
+}
+.logo>.figure{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background: var(--gradient);
+    border-radius: 20% 100% 20% 10%;
+}
+@media (max-width: 1050px) {
+    .menu-icon{
+        display: flex;
+    }
+    .h-menu{
+        position: absolute;
+        top: 110%;
+        right: 1rem;
+        background: var(--dark-color-75);
+        flex-direction: column;
+        z-index: 5;
+        font-weight: 600;
+        gap: 2rem;
+        padding: 3rem;
+        border-radius: 10px;
+        transition: all .3s ease-in;
+        overflow: hidden;
+        box-shadow: 0 35px 20px var(--dark-color-25);
+        font-weight: 800;
+    }
+    .h-menu .flex{
+        position: relative;
+    }
+    .h-container .flex{
+        flex-direction: column;
+    }
+}

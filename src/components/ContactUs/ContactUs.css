@@ -1,0 +1,72 @@
+.contact-container{
+    position: relative;
+}
+.contact-container form{
+    gap: 2rem;
+}
+.contact-container form>div{
+    gap: 2rem;
+}
+.contact-container>div{
+    gap: 2rem;
+}
+.field{
+    position: relative;
+}
+.error{
+    position: absolute;
+    width: 100%;
+    bottom: -1.5rem;
+    left: 1rem;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+.field svg{
+    position: absolute;
+    left: 2rem;
+    top: 30%;
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-color);
+}
+.contact-container input{
+    outline: none;
+    border: none;
+    color: var(--light-color);
+    padding: 1rem 1rem 1rem 4rem;
+    border-radius: 10px;
+    background: var(--dark-color-25);
+    font-size: 1.1rem;
+    transition: all .3s linear;
+}
+.contact-container input:focus{
+    background: var(--dark-color-50);
+}
+.contact-container input::placeholder{
+    color: var(--secondary-color);
+}
+.success{
+    color: var(--primary-color);
+    font-size: .9rem;
+    padding: 1rem;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.success .flex{
+    gap: 1rem;
+    align-items: center;
+}
+.success svg{
+    fill: var(--primary-text-color);
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+
+@media (max-width: 640px){
+    form .flex{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,9 @@
+.g-container{
+    position: relative;
+    gap: 2rem;
+    text-align: center;
+}
+.g-wrap{
+    position: relative;
+    background: var(--dark-color-25);
+}

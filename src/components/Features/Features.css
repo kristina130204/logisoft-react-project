@@ -1,0 +1,211 @@
+#features{
+    position: relative;
+    overflow: visible;
+}
+.features-container{
+    gap: 4rem;
+    position: relative;
+}
+.features-container>div{
+    flex: 1;
+    gap: 4rem;
+}
+.features-container .image-container{
+    width: 25rem;
+    height: 22rem;
+    border-radius: 200% 50rem 50rem 30rem;
+}
+.features-container .image{
+    width: 30rem !important;
+    height: 28rem !important;
+}
+.features-right{
+    gap: 1.5rem;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+li:hover{
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+li::before{
+    content: '►';
+    font-size: 14px;
+    color: var(--primary-color)
+}
+.stats{
+    gap: 5rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+.stat>:nth-child(1){
+    font-size: 3rem;
+}
+.stat>:nth-child(1)>:last-child{
+    color: var(--secondary-color)
+}
+.cards-container .cards{
+    gap: 2rem;
+    align-items: stretch;
+    position: relative;
+}
+.cards-container{
+    position: relative;
+}
+.figure-big, .figure-small{
+    position: absolute;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    opacity: .3;
+}
+.figure-big{
+    top: 32%;
+    left: 12%;
+    width: 14rem;
+    height: 14rem;
+    background: var(--gradient);
+    border-radius: 180% 140% 100% 100%;
+    animation-name: deg;
+}
+.figure-small{
+    top: 40%;
+    left: 33%;
+    width: 5rem;
+    height: 5rem;
+    background: var(--gradient-2);
+    border-radius: 140% 180% 150% 170%;
+    animation-name: deg-small;
+}
+.card{
+    gap: 2rem;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all .3s ease-in;
+    width: 33%;
+    box-shadow: 0px 40px 20px var(--dark-color-25);
+    z-index: 1;
+}
+.card:hover{
+    transform: translateY(-15px);
+}
+.card:hover .blur-card{
+    opacity: .5;
+}
+.blur-card{
+    filter: blur(50px);
+    opacity: .2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-2);
+    transition: all .3s ease-in;
+}
+.card-image{
+    width: 5rem;
+    height: 5rem;
+}
+.card-image>svg{
+    height: 100%;
+    width: 100%;
+    fill: var(--secondary-color);
+}
+.card .text{
+    gap: 1rem;
+    text-align: center;
+}
+@keyframes deg {
+    0% {
+        border-radius: 180% 140% 100% 100%;
+        transform: translate(20px, 10px);
+    }
+    50%{
+        border-radius: 50%;
+    }
+    100%{
+        border-radius: 160% 100% 50%;
+        transform: translate(0, 0);
+    }
+}
+@keyframes deg-small {
+    0% {
+        border-radius: 140% 180% 150% 170%;
+        transform: translate(-10px, -50px);
+    }
+    50%{
+        border-radius: 50%;
+    }
+    100%{
+        border-radius: 60% 30% 100%;
+        transform: translate(0, 10px);
+    }
+}
+
+@media (max-width: 980px) {
+    .features-container>.flex{
+        flex-direction: column;
+    }
+    .features-right{
+        align-items: center;
+    }
+    .cards{
+        width: 90%;
+        flex-direction: column;
+    }
+    .card{
+        padding: 4rem 2rem;
+        width: 100%;
+    }
+    .cards-container{
+        gap: 2rem !important;
+    }
+    .features-left{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .features-left .image-content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .figure-big{
+        top: 22%;
+        left: 12%;
+    }
+    .figure-small{
+        top: 30%;
+        left: 23%;
+    }
+    ul{
+        position: relative;
+    }
+    .btn{
+        position: relative;
+    }
+    .features-container .image{
+        left: 10% !important;
+    }
+}
+@media (max-width: 640px) {
+    .features-container .image{
+        width: 20rem !important;
+        height: 18rem !important;
+        left: 0% !important;
+    }
+}

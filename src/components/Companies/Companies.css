@@ -1,0 +1,19 @@
+.r-container{
+    overflow: hidden;
+}
+.comp-card img{
+    width: 12rem;
+    height: 10rem;
+    object-fit: contain;
+}
+.comp-card{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    .r-head{
+        align-items: center;
+    }
+}
